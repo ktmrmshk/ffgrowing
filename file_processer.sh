@@ -1,16 +1,7 @@
 #!/bin/bash
 
-PROG_DIR=/home/kmd/kitamura_sandbox/fftest
-DROPBOX_DIR=/data/pmpshare/KMD\ UCSD\ collaboration\ documentary/_MOV_DROP
-WORKING_DIR=$DROPBOX_DIR/.tmp
-DSTDIR=/data/pmpshare/KMD\ UCSD\ collaboration\ documentary/_MOV_CONV
-
-FF264=$PROG_DIR/ff264.sh
-QTFAST=$PROG_DIR/qt-faststart
-MOVEXT="*.mp4 *.MP4 *.mov *.MOV"
-MULTIPROCESS=OFF
-PROC_LOCK_PREFIX=".inproc_fileproc"
-PROC_LOCK_FILENAME=$PROC_LOCK_PREFIX.$$
+#read the parameter file
+. /home/kmd/kitamura_sandbox/fftest/params.sh
 
 
 
@@ -59,8 +50,6 @@ touch "$WORKING_DIR"/$PROC_LOCK_FILENAME
 #enter the dropbox dir
 cd "$DROPBOX_DIR"
 
-echo "DEBUG: pwd=" `pwd`
-echo `ls -la`
 
 #transcode by files 
 for F in $MOVEXT

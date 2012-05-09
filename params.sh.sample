@@ -1,0 +1,17 @@
+PROG_DIR=/home/kmd/kitamura_sandbox/fftest
+DROPBOX_DIR=/data/pmpshare/KMD\ UCSD\ collaboration\ documentary/_MOV_DROP
+WORKING_DIR=$DROPBOX_DIR/.tmp
+DSTDIR=/data/pmpshare/KMD\ UCSD\ collaboration\ documentary/_MOV_CONV
+
+FF264=$PROG_DIR/ff264.sh
+QTFAST=$PROG_DIR/qt-faststart
+MOVEXT="*.mp4 *.MP4 *.mov *.MOV"
+MULTIPROCESS=OFF
+PROC_LOCK_PREFIX=".inproc_fileproc"
+PROC_LOCK_FILENAME=$PROC_LOCK_PREFIX.$$
+
+
+
+FFMPEG=/home/kmd/kitamura_sandbox/bin/ffmpeg
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/kmd/kitamura_sandbox/lib
+
