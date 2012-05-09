@@ -1,7 +1,7 @@
 #!/bin/bash
 
-. /home/kmd/kitamura_sandbox/fftest/params.sh
-#. /home/kitamura/fftest/params.sh
+#. /home/kmd/kitamura_sandbox/fftest/params.sh
+. /home/kitamura/fftest/params.sh
 
 
 VFOPT1="drawtext=fontfile=/usr/share/fonts/liberation/LiberationMono-Regular.ttf: timecode='00\:00\:00\:00': r=23.98: x=(w-2*tw)/4: y=h-(3*lh): fontcolor=white: box=0: fontsize=40: box=1: boxcolor=black@0.6"
