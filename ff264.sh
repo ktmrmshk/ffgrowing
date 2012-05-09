@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#FFMPEG=/usr/local/bin/ffmpeg
-FFMPEG=/home/kmd/kitamura_sandbox/bin/ffmpeg
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/kmd/kitamura_sandbox/lib
+FFMPEG=/usr/local/bin/ffmpeg
+#FFMPEG=/home/kmd/kitamura_sandbox/bin/ffmpeg
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/kmd/kitamura_sandbox/lib
 
 VFOPT1="drawtext=fontfile=/usr/share/fonts/liberation/LiberationMono-Regular.ttf: timecode='00\:00\:00\:00': r=23.98: x=(w-2*tw)/4: y=h-(3*lh): fontcolor=white: box=0: fontsize=40: box=1: boxcolor=black@0.6"
 
