@@ -95,7 +95,7 @@ do
 				#COMMAND="ffmpeg -i $WORKING_DIR/$F -vcodec libx264 -vprofile baseline -b:v 2400k -s 1280x720 -acodec aac -strict experimental -ab 128k -vf \"$VFOPT1, $VFOPT2\" $WORKING_DIR/${F/.*/_1280x720_tc.mov}"
 				echo "$COMMAND"
 				#$COMMAND
-				$FF264 "$WORKING_DIR/$F" "$F" "$WORKING_DIR/${F/.*/_1280x720_tc.mov}"
+				$FF264 "$WORKING_DIR/$F" "$F" "$WORKING_DIR/${F/.*/_1280x720_tc.mov}" "$PARAMFILE"
 				
 
 				COMMAND="$QTFAST $WORKING_DIR/${F/.*/_1280x720_tc.mov} $WORKING_DIR/${F/.*/_1280x720_tc_fs.mov}"
