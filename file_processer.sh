@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #read the parameter file
-. /home/kmd/kitamura_sandbox/fftest/params.sh
+#. /home/kmd/kitamura_sandbox/fftest/params.sh
+. /home/kitamura/fftest/params.sh
 
 
 
