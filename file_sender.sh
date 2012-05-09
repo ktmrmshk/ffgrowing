@@ -2,7 +2,6 @@
 
 PARAMFILE=$1
 . "$PARAMFILE"
-#. /home/kitamura/fftest/params.sh
 
 
 TR_PROC_LOCK_PREFIX=".proc_filetransfer"

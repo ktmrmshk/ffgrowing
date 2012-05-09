@@ -1,13 +1,8 @@
 #!/bin/bash
 
+
 PARAMFILE=$1
 . "$PARAMFILE"
-
-#read the parameter file
-#. /home/kmd/kitamura_sandbox/fftest/params.sh
-#. /home/kitamura/fftest/params.sh
-
-
 
 
 print_val() {
