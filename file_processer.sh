@@ -31,8 +31,21 @@ fi
 
 #mkdir if there isn't $DSTDIR
 if [ ! -d "$DSTDIR" ]; then
-	echo "[log]: mkdir $DSTRIR"
+	echo "[log]: mkdir $DSTDIR"
 	mkdir -m 777 -p "$DSTDIR"
+fi
+
+
+#mkdir if there isn't $SENDDIR
+if [ ! -d "$SENDDIR" ]; then
+	echo "[log]: mkdir $SENDDIR"
+	mkdir -m 777 -p "$SENDDIR"
+fi
+
+#mkdir if there isn't $RECVDIR
+if [ ! -d "$RECVDIR" ]; then
+	echo "[log]: mkdir $RECVDIR"
+	mkdir -m 777 -p "$RECVDIR"
 fi
 
 #if [ -e ${PROC_LOCK}* ]; then
