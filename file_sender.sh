@@ -1,13 +1,9 @@
 #!/bin/bash
 
-. /home/kitamura/fftest/params.sh
+PARAMFILE=$1
+. "$PARAMFILE"
+#. /home/kitamura/fftest/params.sh
 
-SERVER="67.58.35.229"
-USER="collaboration"
-PASS="documentary"
-
-#REMOTE_DIR="_MOV_DROP/.recv"
-REMOTE_DIR=/data/pmpshare/KMD\ UCSD\ collaboration\ documentary/_MOV_DROP/.recv
 
 TR_PROC_LOCK_PREFIX=".proc_filetransfer"
 TR_PROC_LOCK_FILENAME=$TR_PROC_LOCK_PREFIX.$$

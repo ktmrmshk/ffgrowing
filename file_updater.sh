@@ -1,6 +1,8 @@
 #!/bin/bash
 
-. /home/kitamura/fftest/params.sh
+PARAMFILE=$1
+. "$PARAMFILE"
+#. /home/kitamura/fftest/params.sh
 
 
 
