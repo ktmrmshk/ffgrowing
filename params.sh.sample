@@ -1,7 +1,9 @@
 PROG_DIR=/home/kmd/kitamura_sandbox/fftest
 DROPBOX_DIR=/data/pmpshare/KMD\ UCSD\ collaboration\ documentary/_MOV_DROP
 WORKING_DIR=$DROPBOX_DIR/.tmp
-DSTDIR=/data/pmpshare/KMD\ UCSD\ collaboration\ documentary/_MOV_CONV
+DSTDIR=/data/pmpshare/KMD\ UCSD\ collaboration\ documentary/_MOV_DROP/.send
+SENDDIR=/data/pmpshare/KMD\ UCSD\ collaboration\ documentary/_MOV_DROP/.send
+RECVDIR=/data/pmpshare/KMD\ UCSD\ collaboration\ documentary/_MOV_DROP/.recv
 
 FF264=$PROG_DIR/ff264.sh
 QTFAST=$PROG_DIR/qt-faststart
