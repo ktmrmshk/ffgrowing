@@ -38,7 +38,8 @@ do
 			echo "SIZE2 = $SIZE2"
 
 			if [ $SIZE1 = $SIZE2 ]; then
-				
+	
+				echo "$RECVDIR/$F" "$DONEDIR/$F"
         #mv file to local CONV dir
 				mv "$RECVDIR/$F" "$DONEDIR/$F"
 				
