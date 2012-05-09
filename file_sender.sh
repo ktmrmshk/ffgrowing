@@ -46,6 +46,7 @@ do
 				lftp -u $USER,$PASS $SERVER <<END
 cd "$REMOTE_DIR"
 put "$SENDDIR/$F"
+chmod 666 "$F"
 END
         #mv file to local CONV dir
 				mv "$SENDDIR/$F" "$DONEDIR/$F"
