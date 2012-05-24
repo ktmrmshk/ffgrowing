@@ -39,10 +39,26 @@ do
 
 			if [ $SIZE1 = $SIZE2 ]; then
 	
-				echo "$RECVDIR/$F" "$DONEDIR/$F"
-        #mv file to local CONV dir
-				mv "$RECVDIR/$F" "$DONEDIR/$F"
+				#determine dst file name
+				#check if same file name movie exist or not
 				
+				#first set dst_file name to just filename
+				DST_F=$F
+				for IDX in {1..20}
+	   		do
+					#if same file name file exists in dstdir
+					echo "Index=$IDX"
+					if [ -e "$DONEDIR/$DST_F" ]; then
+						DST_F="${DST_F%.*}_r.${DST_F##*.}"
+					else
+						break;
+					fi
+				done
+
+				echo "$RECVDIR/$F" "$DONEDIR/$DST_F"
+				#mv file to local CONV dir
+				mv "$RECVDIR/$F" "$DONEDIR/$DST_F"
+
 			else
 
 				echo "file $F is not ready..."

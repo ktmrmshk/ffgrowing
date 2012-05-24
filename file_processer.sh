@@ -117,7 +117,6 @@ do
 				mv "$WORKING_DIR/$F" "$DSTDIR"
 				
 
-
 			else
 
 				echo "file $F is now trasferring..."
@@ -133,16 +132,8 @@ do
 	fi
 done
 
-
-
-
-
 #rm process lock file
 rm "$WORKING_DIR/$PROC_LOCK_FILENAME"
 
 exit 1
-
-
-
-
 
