@@ -1,9 +1,19 @@
 #!/bin/bash
 
-LOCAL_DIR="/Users/kitamura/gitdir/ffgrowing/_FILE_SHARED"
-REMOTE_DIR="/data/KMD UCSD collaboration documentary/_FILE_SHARED"
+LOCAL_DIR="/data/KMD UCSD collaboration documentary/_FILE_SHARED"
+REMOTE_DIR="_FILE_SHARED"
 
-FTP_SERVER="137.110.119.195"
+FTP_SERVER="67.58.35.229"
+
+LOCK="$LOCAL_DIR/.file_sharing"
+
+
+if [ -f "$LOCK" ];then
+	echo "other file_sharing.sh  process running ..."
+	exit 0;
+fi
+
+touch "$LOCK"
 
 echo "pull from remote server ..."
 
@@ -15,5 +25,5 @@ END
 
 #echo "push to remote server"
 
-
+rm "$LOCK"
 
