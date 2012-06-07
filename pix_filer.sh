@@ -1,7 +1,12 @@
 #!/bin/bash
 
-TRANCODED_DIR="/home/kitamura/fftest/testmov1"
-PIX_DIR="/home/kitamura/fftest/testpix"
+TRANCODED_DIR="/Users/kitamura/gitdir/ffgrowing/testmov"
+PIX_DIR="/Users/kitamura/gitdir/ffgrowing/pix_uploaded"
+
+#for pix server
+PIX_PROJECT="Growing Documentary"
+PIX_DST_DIR="/Growing Documentary/_Test Files"
+
 PIX_UPLOADED_DIR="$PIX_DIR"
 
 #mkdir if needed
@@ -12,7 +17,7 @@ fi
 
 
 #copy files to pix_dir from trascoded
-for F in "$TRANCODED_DIR"/*_1280x720_tc_fs.mov
+for F in $TRANCODED_DIR/*_1280x720_tc_fs.mov
 do
 
 	echo "---- $F"
@@ -27,8 +32,11 @@ do
 		echo "cp $F $PIX_DIR/$F_NAME"
 		cp "$F" "$PIX_UPLOADED_DIR/$DONE_F_NAME"
 		
-		echo "upload to pix"
+		echo "uploading to pix...."
+		echo "pixcli -u mkitamura -P $PIX_PROJECT --upload $PIX_DST_DIR $PIX_UPLOADED_DIR/$DONE_F_NAME"
+		pixcli -u mkitamura -P "$PIX_PROJECT" --upload "$PIX_DST_DIR" "$PIX_UPLOADED_DIR/$DONE_F_NAME"
 		
+
 	fi
 
 done
