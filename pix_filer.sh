@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#TRANCODED_DIR="/Volumes/dav/_MOV_CONV"
-#PIX_DIR="/Volumes/dav/_MOV_CONV/.PIX_UPLOADED"
-TRANCODED_DIR="/Users/kitamura/gitdir/ffgrowing/testmov"
-PIX_DIR="/Users/kitamura/gitdir/ffgrowing/pix_uploaded"
+TRANCODED_DIR="/Volumes/dav/_MOV_CONV"
+PIX_DIR="/Volumes/dav/_MOV_CONV/.PIX_UPLOADED"
+#TRANCODED_DIR="/Users/kitamura/gitdir/ffgrowing/testmov"
+#PIX_DIR="/Users/kitamura/gitdir/ffgrowing/pix_uploaded"
 
 #for pix server
 PIX_PROJECT="Growing Documentary"
