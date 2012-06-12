@@ -62,21 +62,21 @@ do
 		echo "processing $F ... "
 
 		#6. do ffmpeg transcoding
-		COMMAND="$FF264 $F $FILE_PREFIX ${F/.*/_1280x720_tc.mov}"
+		COMMAND="$FF264 $F $FILE_PREFIX ${F/.*/__tmp.mov}"
 		echo "$COMMAND"
 		#$COMMAND
-		$FF264 "$F" "$FILE_PREFIX" "${F/.*/_1280x720_tc.mov}" "$PARAMFILE"
+		$FF264 "$F" "$FILE_PREFIX" "${F/.*/__tmp.mov}" "$PARAMFILE"
 
 		#7. do qt-fast-ing
-		COMMAND="$QTFAST ${F/.*/_1280x720_tc.mov} ${F/.*/$POSTFIX.mov}"
+		COMMAND="$QTFAST ${F/.*/__tmp.mov} ${F/.*/$POSTFIX.mov}"
 		echo "$COMMAND"
-		$QTFAST "${F/.*/_1280x720_tc.mov}" "${F/.*/$POSTFIX.mov}"
+		$QTFAST "${F/.*/__tmp.mov}" "${F/.*/$POSTFIX.mov}"
 
 		#8. remove temporary file
-		COMMAND="rm ${F/.*/_1280x720_tc.mov}"
+		COMMAND="rm ${F/.*/__tmp.mov}"
 		echo "$COMMAND"
 		#$COMMAND
-		rm "${F/.*/_1280x720_tc.mov}"
+		rm "${F/.*/__tmp.mov}"
 
 		#9. chmod for one to rwrite and read
 		echo "chmod 666"
