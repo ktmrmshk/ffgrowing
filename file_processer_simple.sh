@@ -2,13 +2,6 @@
 
 #basically handling file as absolute path
 
-#set parameters
-#DROPDIR="/data/KMD UCSD collaboration documentary/Digital Distribution"
-DROPDIR="/home/kitamura/fftest/sandbox"
-LOCK="$DROPDIR/.FILE_PROCESSER_SIMPLE.lock"
-POSTFIX="_1280x720_tc_fs"
-
-
 #read param file
 PARAMFILE=$1
 . "$PARAMFILE"

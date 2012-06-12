@@ -10,6 +10,11 @@ PASS="documentary"
 REMOTE_DIR=/data/pmpshare/KMD\ UCSD\ collaboration\ documentary/_MOV_DROP/.recv
 
 
+#for Additional Project:  parameters used in file_processor_simple .sh
+DROPDIR="/data/KMD UCSD collaboration documentary/Digital Distribution"
+LOCK="$DROPDIR/.FILE_PROCESSER_SIMPLE.lock"
+POSTFIX="_1280x720_tc_fs"
+
 
 
 
